@@ -9,7 +9,10 @@ import SwiftUI
 
 struct PerformanceView: View {
     var body: some View {
-        Text("PerformanceView")
+        ZStack {
+            Text("PerformanceView")
+        }
+        .navigationTitle("성능")
     }
 }
 

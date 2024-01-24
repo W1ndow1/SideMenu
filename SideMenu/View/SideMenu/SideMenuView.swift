@@ -10,7 +10,10 @@ import SwiftUI
 struct SideMenuView: View {
     @Binding var isShowing: Bool
     @Binding var selectedTab: Int
+    @Binding var selectedView: [SideMenuOptionModel]
+    
     @State private var selectedOption: SideMenuOptionModel?
+    
     var body: some View {
         ZStack {
             if isShowing {
@@ -22,7 +25,6 @@ struct SideMenuView: View {
                 HStack {
                     VStack(alignment: .leading, spacing: 10) {
                         SideMenuHeaderView()
-                        
                         VStack {
                             ForEach(SideMenuOptionModel.allCases) { option in
                                 Button(action: {
@@ -30,7 +32,6 @@ struct SideMenuView: View {
                                 }, label: {
                                     SideMenuRowView(option: option, selectedOption: $selectedOption)
                                 })
-                                
                             }
                         }
                         Spacer()
@@ -49,10 +50,12 @@ struct SideMenuView: View {
     private func onOptionTapped(_ option: SideMenuOptionModel) {
         selectedOption = option
         selectedTab = option.rawValue
+        selectedView.append(option)
         isShowing = false
     }
 }
 
 #Preview {
-    SideMenuView(isShowing: .constant(true), selectedTab: .constant(0))
+    SideMenuView(isShowing: .constant(true), selectedTab: .constant(0), selectedView: .constant([.notifications]))
 }
+
