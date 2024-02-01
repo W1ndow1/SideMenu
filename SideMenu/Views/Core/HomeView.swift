@@ -1,21 +1,20 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  SideMenu
 //
-//  Created by window1 on 1/22/24.
+//  Created by window1 on 1/24/24.
 //
-
 import SwiftUI
 
 struct HomeView: View {
     @State private var showMenu = false
-    @State private var selectedTab = 0
+    @State private var showMessage = false
     @State private var selectedView: [SideMenuOptionModel] = []
     
     var body: some View {
         NavigationStack(path: $selectedView) {
             ZStack {
-                SideMenuView(isShowing: $showMenu, selectedTab: $selectedTab, selectedView: $selectedView)
+                SideMenuView(isShowing: $showMenu, selectedView: $selectedView)
             }
             .navigationDestination(for: SideMenuOptionModel.self) { view in
                 switch view {
@@ -37,18 +36,27 @@ struct HomeView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Button(action: {
+                    Button {
                         showMenu.toggle()
-                    }, label: {
+                    } label: {
                         Image(systemName: "line.3.horizontal")
+                    }
+                }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showMessage.toggle()
+                    } label: {
+                        Image(systemName: "paperplane")
+                    }
+                    
+                    .fullScreenCover(isPresented: $showMessage, content: {
+                        DirectMessageView.init()
                     })
                 }
             }
         }
     }
 }
-
-
 
 #Preview {
     HomeView()

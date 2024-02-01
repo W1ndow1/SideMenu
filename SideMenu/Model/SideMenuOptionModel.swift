@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum SideMenuOptionModel: Int, CaseIterable {
     case dashboard
@@ -43,7 +44,6 @@ enum SideMenuOptionModel: Int, CaseIterable {
             return "bell"
         }
     }
-    
 }
 
 extension SideMenuOptionModel: Identifiable {

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SideMenuView: View {
     @Binding var isShowing: Bool
-    @Binding var selectedTab: Int
     @Binding var selectedView: [SideMenuOptionModel]
     
     @State private var selectedOption: SideMenuOptionModel?
@@ -49,13 +48,12 @@ struct SideMenuView: View {
     
     private func onOptionTapped(_ option: SideMenuOptionModel) {
         selectedOption = option
-        selectedTab = option.rawValue
         selectedView.append(option)
         isShowing = false
     }
 }
 
 #Preview {
-    SideMenuView(isShowing: .constant(true), selectedTab: .constant(0), selectedView: .constant([.notifications]))
+    SideMenuView(isShowing: .constant(true), selectedView: .constant([.notifications]))
 }
 

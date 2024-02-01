@@ -13,6 +13,7 @@ struct NotificationView: View {
             Text("NotificationView")
         }
         .navigationTitle("알림")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
