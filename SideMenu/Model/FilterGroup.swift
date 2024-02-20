@@ -26,13 +26,15 @@ struct Artist: Identifiable {
     var brithDay: String
 }
 
-struct SampleData{
+struct SampleData {
+    
     let group: [FilterGroup] = [
         FilterGroup(id: 180124, name: "fromis_9"),
         FilterGroup(id: 190001, name: "CHUU"),
         FilterGroup(id: 190002, name: "JANG GYU RI"),
         
     ]
+    
     let member: [Artist] = [
         Artist(name: "이서연", id: 113901, groupName: "fromis_9", groupID: 180124, brithDay: "2000-01-22"),
         Artist(name: "이나경", id: 113902, groupName: "fromis_9", groupID: 180124, brithDay: "2000-06-01"),

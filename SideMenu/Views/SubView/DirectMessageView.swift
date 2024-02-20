@@ -12,31 +12,40 @@ struct DirectMessageView: View {
     @Environment(\.dismiss) var dismiss
     @State private var searchText: String = ""
     @State private var selectedGroupID: Int?
-    @State private var selectedIndex: Int?
+    @State private var selectedIndex = 0
+    @State private var buttonWidth: CGFloat = 0
     private let sample = SampleData()
     
     var body: some View {
         NavigationStack {
-            ScrollView(.horizontal ,content: {
+            ScrollView(.horizontal) {
                 HStack {
                     ForEach(Array(sample.group.enumerated()), id: \.element.id) { index, data in
-                        Button {
-                            selectedGroupID = data.id
-                            selectedIndex = index
-                        } label: { Text("\(data.name)") }
+                            Button {
+                                selectedGroupID = data.id
+                                selectedIndex = index
+                            } label: {
+                                    Text("\(data.name)")
+                            }
                             .fontWeight(.bold)
                             .padding(8)
-                            .foregroundStyle(selectedIndex == index 
-                                             ? Color.white 
-                                             : Color.black
-                            )
+                            .foregroundStyle(selectedIndex == index ? Color.white : Color.black)
                             .background(selectedIndex == index ? Color.black : Color.white)
                             .clipShape(Capsule())
                     }
                 }
-            })
+            }
             .scrollIndicators(.hidden)
             .padding(.leading, 20)
+            
+            GeometryReader { geometry in
+                Rectangle()
+                    .fill(Color.pink)
+                    .frame(width: 300 / CGFloat(sample.group.count), height: 4)
+                    .offset(x: CGFloat(selectedIndex) * 300 / CGFloat(sample.group.count))
+            }
+            .frame(height:4)
+            .padding(.leading)
             
             List {
                 ForEach(filteredArtist) { artist in
@@ -44,9 +53,10 @@ struct DirectMessageView: View {
                 }
                 
             }
+            
             .scrollIndicators(.visible)
             .searchable(text: $searchText)
-            .navigationTitle("DM")
+            .navigationTitle("Direct Message")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
@@ -61,6 +71,7 @@ struct DirectMessageView: View {
             }
         }
     }
+    
     var filteredArtist: [Artist] {
         if let selectedGroupID = selectedGroupID {
             return sample.member.filter { $0.groupID == selectedGroupID }
@@ -71,11 +82,6 @@ struct DirectMessageView: View {
 }
 
 
-
-
 #Preview {
     DirectMessageView()
 }
-
-/*
- */

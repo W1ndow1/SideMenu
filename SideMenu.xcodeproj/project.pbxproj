@@ -10,6 +10,8 @@
 		A8086FA52B6153C7007C1111 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8086FA42B6153C7007C1111 /* HomeView.swift */; };
 		A8086FA92B615C1C007C1111 /* DirectMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8086FA82B615C1C007C1111 /* DirectMessageView.swift */; };
 		A8086FAB2B628AFE007C1111 /* FilterGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8086FAA2B628AFE007C1111 /* FilterGroup.swift */; };
+		A83F82EB2B8338C3005F0F90 /* HelpCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83F82EA2B8338C3005F0F90 /* HelpCenterView.swift */; };
+		A83F82EE2B843507005F0F90 /* WebViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83F82ED2B843507005F0F90 /* WebViewData.swift */; };
 		A8ABE0C82B5FAB5A0011ECBF /* PerformanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ABE0C72B5FAB5A0011ECBF /* PerformanceView.swift */; };
 		A8ABE0CA2B5FAD6D0011ECBF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ABE0C92B5FAD6D0011ECBF /* ProfileView.swift */; };
 		A8ABE0CC2B5FAD7C0011ECBF /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ABE0CB2B5FAD7C0011ECBF /* SearchView.swift */; };
@@ -29,6 +31,8 @@
 		A8086FA42B6153C7007C1111 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A8086FA82B615C1C007C1111 /* DirectMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectMessageView.swift; sourceTree = "<group>"; };
 		A8086FAA2B628AFE007C1111 /* FilterGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterGroup.swift; sourceTree = "<group>"; };
+		A83F82EA2B8338C3005F0F90 /* HelpCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterView.swift; sourceTree = "<group>"; };
+		A83F82ED2B843507005F0F90 /* WebViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewData.swift; sourceTree = "<group>"; };
 		A8ABE0C72B5FAB5A0011ECBF /* PerformanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceView.swift; sourceTree = "<group>"; };
 		A8ABE0C92B5FAD6D0011ECBF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		A8ABE0CB2B5FAD7C0011ECBF /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -67,8 +71,17 @@
 			isa = PBXGroup;
 			children = (
 				A8086FA82B615C1C007C1111 /* DirectMessageView.swift */,
+				A83F82EA2B8338C3005F0F90 /* HelpCenterView.swift */,
 			);
 			path = SubView;
+			sourceTree = "<group>";
+		};
+		A83F82EC2B84337B005F0F90 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A83F82ED2B843507005F0F90 /* WebViewData.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		A8ABE0C42B5FA4F50011ECBF /* SideMenu */ = {
@@ -135,6 +148,7 @@
 		A8D084C42B5DF3F600614438 /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				A83F82EC2B84337B005F0F90 /* Utils */,
 				A8ABE0C52B5FA5060011ECBF /* Model */,
 				A8ABE0C62B5FAB3A0011ECBF /* Views */,
 				A8D084C92B5DF3F800614438 /* Assets.xcassets */,
@@ -231,7 +245,9 @@
 				A8D084D62B5EB80900614438 /* SideMenuHeaderView.swift in Sources */,
 				A8ABE0C82B5FAB5A0011ECBF /* PerformanceView.swift in Sources */,
 				A8ABE0D12B5FB1BD0011ECBF /* DashBoardView.swift in Sources */,
+				A83F82EE2B843507005F0F90 /* WebViewData.swift in Sources */,
 				A8D084D82B5EBE0100614438 /* SideMenuRowView.swift in Sources */,
+				A83F82EB2B8338C3005F0F90 /* HelpCenterView.swift in Sources */,
 				A8086FAB2B628AFE007C1111 /* FilterGroup.swift in Sources */,
 				A8D084C62B5DF3F600614438 /* SideMenuApp.swift in Sources */,
 				A8ABE0CE2B5FAD890011ECBF /* NotificationView.swift in Sources */,

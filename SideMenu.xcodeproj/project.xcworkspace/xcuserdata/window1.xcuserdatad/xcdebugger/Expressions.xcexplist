@@ -3,16 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "closure #1 in closure #1 in closure #1 in ContentView.body.getter:ContentView.swift">
-      </ContextState>
-      <ContextState
-         contextName = "SideMenuView.onOptionTapped(_:):SideMenuView.swift">
+         contextName = "closure #2 in closure #1 in DirectMessageView.body.getter:DirectMessageView.swift">
          <PersistentStrings>
             <PersistentString
-               value = "selectedOption">
-            </PersistentString>
-            <PersistentString
-               value = "selectedOptionReturn">
+               value = "selectedIndex">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

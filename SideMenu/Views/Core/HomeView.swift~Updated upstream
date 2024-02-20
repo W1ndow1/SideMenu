@@ -9,7 +9,6 @@ import SwiftUI
 struct HomeView: View {
     @State private var showMenu = false
     @State private var showMessage = false
-    @State private var showHelpCenter = false
     @State private var selectedView: [SideMenuOptionModel] = []
     
     var body: some View {
@@ -45,20 +44,11 @@ struct HomeView: View {
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        showHelpCenter.toggle()
-                    } label: {
-                        Image(systemName: "questionmark.app")
-                    }
-                    .fullScreenCover(isPresented: $showHelpCenter, content: {
-                        HelpCenterView.init()
-                    })
-                }
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
                         showMessage.toggle()
                     } label: {
                         Image(systemName: "paperplane")
                     }
+                    
                     .fullScreenCover(isPresented: $showMessage, content: {
                         DirectMessageView.init()
                     })
