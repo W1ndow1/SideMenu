@@ -8,10 +8,22 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @State private var tabIndex = 0
     var body: some View {
-        ZStack {
-            Text("ProfileView")
+        VStack {
+            TopTabBar(tabIndex: $tabIndex)
+            switch tabIndex {
+            case 0:
+                DetailProfileView()
+            case 1:
+                PaymentHistoryView()
+            default:
+                DetailProfileView()
+            }
+            Spacer()
+
         }
+        .padding(.horizontal, 12)
         .navigationTitle("프로필")
     }
 }

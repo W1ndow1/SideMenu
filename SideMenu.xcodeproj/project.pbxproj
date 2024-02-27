@@ -12,6 +12,10 @@
 		A8086FAB2B628AFE007C1111 /* FilterGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8086FAA2B628AFE007C1111 /* FilterGroup.swift */; };
 		A83F82EB2B8338C3005F0F90 /* HelpCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83F82EA2B8338C3005F0F90 /* HelpCenterView.swift */; };
 		A83F82EE2B843507005F0F90 /* WebViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83F82ED2B843507005F0F90 /* WebViewData.swift */; };
+		A83F82F02B84D63E005F0F90 /* EdgeBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83F82EF2B84D63E005F0F90 /* EdgeBorder.swift */; };
+		A83F83232B864904005F0F90 /* DetailProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83F83222B864904005F0F90 /* DetailProfileView.swift */; };
+		A83F83252B864A04005F0F90 /* PaymentHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83F83242B864A04005F0F90 /* PaymentHistoryView.swift */; };
+		A83F83272B865843005F0F90 /* TopTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83F83262B865843005F0F90 /* TopTabBar.swift */; };
 		A8ABE0C82B5FAB5A0011ECBF /* PerformanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ABE0C72B5FAB5A0011ECBF /* PerformanceView.swift */; };
 		A8ABE0CA2B5FAD6D0011ECBF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ABE0C92B5FAD6D0011ECBF /* ProfileView.swift */; };
 		A8ABE0CC2B5FAD7C0011ECBF /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ABE0CB2B5FAD7C0011ECBF /* SearchView.swift */; };
@@ -33,6 +37,10 @@
 		A8086FAA2B628AFE007C1111 /* FilterGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterGroup.swift; sourceTree = "<group>"; };
 		A83F82EA2B8338C3005F0F90 /* HelpCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterView.swift; sourceTree = "<group>"; };
 		A83F82ED2B843507005F0F90 /* WebViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewData.swift; sourceTree = "<group>"; };
+		A83F82EF2B84D63E005F0F90 /* EdgeBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeBorder.swift; sourceTree = "<group>"; };
+		A83F83222B864904005F0F90 /* DetailProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProfileView.swift; sourceTree = "<group>"; };
+		A83F83242B864A04005F0F90 /* PaymentHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHistoryView.swift; sourceTree = "<group>"; };
+		A83F83262B865843005F0F90 /* TopTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTabBar.swift; sourceTree = "<group>"; };
 		A8ABE0C72B5FAB5A0011ECBF /* PerformanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceView.swift; sourceTree = "<group>"; };
 		A8ABE0C92B5FAD6D0011ECBF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		A8ABE0CB2B5FAD7C0011ECBF /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -80,8 +88,19 @@
 			isa = PBXGroup;
 			children = (
 				A83F82ED2B843507005F0F90 /* WebViewData.swift */,
+				A83F82EF2B84D63E005F0F90 /* EdgeBorder.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		A83F83212B86489A005F0F90 /* ProfileSubView */ = {
+			isa = PBXGroup;
+			children = (
+				A83F83262B865843005F0F90 /* TopTabBar.swift */,
+				A83F83222B864904005F0F90 /* DetailProfileView.swift */,
+				A83F83242B864A04005F0F90 /* PaymentHistoryView.swift */,
+			);
+			path = ProfileSubView;
 			sourceTree = "<group>";
 		};
 		A8ABE0C42B5FA4F50011ECBF /* SideMenu */ = {
@@ -106,6 +125,7 @@
 		A8ABE0C62B5FAB3A0011ECBF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A83F83212B86489A005F0F90 /* ProfileSubView */,
 				A8086FA72B615BF8007C1111 /* SubView */,
 				A8ABE0D22B6128B10011ECBF /* Core */,
 				A8ABE0C42B5FA4F50011ECBF /* SideMenu */,
@@ -237,7 +257,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8ABE0CA2B5FAD6D0011ECBF /* ProfileView.swift in Sources */,
+				A83F83252B864A04005F0F90 /* PaymentHistoryView.swift in Sources */,
 				A8086FA92B615C1C007C1111 /* DirectMessageView.swift in Sources */,
+				A83F83272B865843005F0F90 /* TopTabBar.swift in Sources */,
+				A83F83232B864904005F0F90 /* DetailProfileView.swift in Sources */,
 				A8ABE0CC2B5FAD7C0011ECBF /* SearchView.swift in Sources */,
 				A8D084D42B5EB75300614438 /* SideMenuView.swift in Sources */,
 				A8D084DA2B5EC05400614438 /* SideMenuOptionModel.swift in Sources */,
@@ -249,6 +272,7 @@
 				A8D084D82B5EBE0100614438 /* SideMenuRowView.swift in Sources */,
 				A83F82EB2B8338C3005F0F90 /* HelpCenterView.swift in Sources */,
 				A8086FAB2B628AFE007C1111 /* FilterGroup.swift in Sources */,
+				A83F82F02B84D63E005F0F90 /* EdgeBorder.swift in Sources */,
 				A8D084C62B5DF3F600614438 /* SideMenuApp.swift in Sources */,
 				A8ABE0CE2B5FAD890011ECBF /* NotificationView.swift in Sources */,
 			);

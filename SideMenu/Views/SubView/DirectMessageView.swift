@@ -13,7 +13,6 @@ struct DirectMessageView: View {
     @State private var searchText: String = ""
     @State private var selectedGroupID: Int?
     @State private var selectedIndex = 0
-    @State private var buttonWidth: CGFloat = 0
     private let sample = SampleData()
     
     var body: some View {
@@ -37,23 +36,11 @@ struct DirectMessageView: View {
             }
             .scrollIndicators(.hidden)
             .padding(.leading, 20)
-            
-            GeometryReader { geometry in
-                Rectangle()
-                    .fill(Color.pink)
-                    .frame(width: 300 / CGFloat(sample.group.count), height: 4)
-                    .offset(x: CGFloat(selectedIndex) * 300 / CGFloat(sample.group.count))
-            }
-            .frame(height:4)
-            .padding(.leading)
-            
             List {
                 ForEach(filteredArtist) { artist in
                     Text("\(artist.name)")
                 }
-                
             }
-            
             .scrollIndicators(.visible)
             .searchable(text: $searchText)
             .navigationTitle("Direct Message")
@@ -71,7 +58,6 @@ struct DirectMessageView: View {
             }
         }
     }
-    
     var filteredArtist: [Artist] {
         if let selectedGroupID = selectedGroupID {
             return sample.member.filter { $0.groupID == selectedGroupID }
